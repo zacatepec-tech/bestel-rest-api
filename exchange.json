@@ -3,7 +3,7 @@
     {
       "version": "1.0.0",
       "assetId": "bearer-token-id",
-      "groupId": "702f7afc-d4ce-4692-8c4e-a0418d451c60",
+      "groupId": "577aaf27-83a7-408f-9d03-b2ce0258156a",
       "provided": false
     }
   ],
@@ -11,7 +11,7 @@
   "descriptorVersion": "1.0.0",
   "classifier": "raml",
   "main": "bestel-rest-api.raml",
-  "assetId": "bestel-rest-api",
-  "groupId": "702f7afc-d4ce-4692-8c4e-a0418d451c60",
-  "name": "bestel-rest-api"
+  "assetId": "bestel-api-rest",
+  "groupId": "577aaf27-83a7-408f-9d03-b2ce0258156a",
+  "name": "bestel-api-rest"
 }
