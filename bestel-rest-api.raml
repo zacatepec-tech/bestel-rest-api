@@ -11,3 +11,21 @@ documentation:
   -
     content: "API perrona bien chingona y que chingue su madre el america "
     title: Home
+
+/coverage/orbit:
+  is:
+    - hasRequestID
+  get:
+    displayName: Obtener listado de cuentas
+    description: "Obtener una lista de Cuentas de un cliente "
+    responses:
+      400:
+        body:
+          application/json:
+            example: !include responses/errors/400.json
+      "200":
+        body:
+          application/json:
+            example: !include responses/account/account_list.json
+            type: !include data-types/AccountResponseDT.raml
+      
