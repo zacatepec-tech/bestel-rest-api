@@ -1,0 +1,19 @@
+#%RAML 1.0 DataType
+types:
+  Coverage:
+    type: object
+    properties:
+      id: string
+      name: string
+      remarks: string
+      type: string
+
+  CoverageList:
+    type: array
+    items: Coverage
+
+  NetworkType:
+    type: object
+    properties:
+      coverage: CoverageList
+      type: string
