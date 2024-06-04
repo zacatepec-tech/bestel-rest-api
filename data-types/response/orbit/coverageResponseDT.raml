@@ -3,17 +3,23 @@ types:
   Coverage:
     type: object
     properties:
-      id: string
-      name: string
-      remarks: string
-      type: string
+      id:
+        type: string
+      name:
+        type: string
+      remarks:
+        type: string
+      type:
+        type: string
 
   CoverageList:
     type: array
     items: Coverage
 
-  NetworkType:
+  NetworkCoverage:
     type: object
     properties:
-      coverage: CoverageList
-      type: string
+      coverage:
+        type: CoverageList
+      type:
+        type: string
