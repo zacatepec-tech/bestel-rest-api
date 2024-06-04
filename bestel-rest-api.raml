@@ -19,12 +19,12 @@ documentation:
     displayName: ORBIT
     description: "Este endpoint devuelve la cobertura relacionada con una coordenada geográfica."
     queryParameters:
-      networkId:
-        type: string
+      lat:
+        type: number
         required: true
-      location:
-        type: string
-        required: false
+      lng:
+        type: number
+        required: true
     responses:
       400:
         body:
