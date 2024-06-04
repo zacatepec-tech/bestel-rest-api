@@ -1,0 +1,10 @@
+{
+  "main": "bestel-rest-api.raml",
+  "name": "bestel-rest-api",
+  "groupId": "702f7afc-d4ce-4692-8c4e-a0418d451c60",
+  "assetId": "bestel-rest-api",
+  "version": "1.0.0",
+  "classifier": "raml",
+  "tags": [],
+  "descriptorVersion": "1.0.0"
+}
