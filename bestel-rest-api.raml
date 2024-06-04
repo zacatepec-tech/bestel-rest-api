@@ -18,6 +18,13 @@ documentation:
   get:
     displayName: ORBIT
     description: "Este endpoint devuelve la cobertura relacionada con una coordenada geográfica."
+    queryParameters:
+      networkId:
+        type: string
+        required: true
+      location:
+        type: string
+        required: false
     responses:
       400:
         body:
@@ -34,5 +41,5 @@ documentation:
 
 
 
-            
+
       
