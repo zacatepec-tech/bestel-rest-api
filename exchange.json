@@ -1,10 +1,17 @@
 {
-  "main": "bestel-rest-api.raml",
-  "name": "bestel-rest-api",
-  "groupId": "702f7afc-d4ce-4692-8c4e-a0418d451c60",
-  "assetId": "bestel-rest-api",
+  "dependencies": [
+    {
+      "version": "1.0.0",
+      "assetId": "bearer-token-id",
+      "groupId": "702f7afc-d4ce-4692-8c4e-a0418d451c60",
+      "provided": false
+    }
+  ],
   "version": "1.0.0",
+  "descriptorVersion": "1.0.0",
   "classifier": "raml",
-  "tags": [],
-  "descriptorVersion": "1.0.0"
+  "main": "bestel-rest-api.raml",
+  "assetId": "bestel-rest-api",
+  "groupId": "702f7afc-d4ce-4692-8c4e-a0418d451c60",
+  "name": "bestel-rest-api"
 }
