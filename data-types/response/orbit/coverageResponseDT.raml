@@ -1,27 +1,6 @@
 #%RAML 1.0
 
-title: Contact Information API
-mediaType: application/json
-
-types:
-  Coverage:
-    type: object
-    properties:
-      id:
-        type: string
-      name:
-        type: string
-      remarks:
-        type: string
-      type:
-        type: string
-
-  CoverageList:
-    type: array
-    items: Coverage
-
-  NetworkCoverage:
-    type: object
+  type: object
     properties:
       coverage:
         type: CoverageList
