@@ -16,7 +16,7 @@ traits:
   hasRequestID: !include exchange_modules/702f7afc-d4ce-4692-8c4e-a0418d451c60/bearer-token-id/1.0.0/bearer-token-id.raml
 
 
-/coverage/orbit:
+/orbit/coverage/orbit:
   is:
     - hasRequestID
   get:
@@ -42,7 +42,7 @@ traits:
             example: !include responses/orbit/coverage/coverageArray.json
             type: !include data-types/response/orbit/coverage/coverageResponseDT.raml
 
-/coverage/ping:
+/orbit/coverage/ping:
   is:
     - hasRequestID
   get:
@@ -70,7 +70,7 @@ types:
   conteoEquiposPorAnilloResponse: !include data-types/response/m6/getConteoEquiposPorAnilloResponse.raml
   disponibilidadPuertosPorAnilloResponse: !include data-types/response/m6/getDisponibilidadPuertosPorAnilloResponse.raml
 
-/getParametrosGeneralesDeAnillo:
+/m6/getParametrosGeneralesDeAnillo:
   displayName: GetParametrosGeneralesDeAnillo
   description: |
     Este endpoint devuelve los parámetros generales de un anillo.
@@ -101,7 +101,7 @@ types:
             type: networkLocationsResponse
             example: !include responses/m6/getNetworkLocationsResponse.json
 
-/getConteoEquiposPorAnillo:
+/m6/getConteoEquiposPorAnillo:
   displayName: GetConteoEquiposPorAnillo
   description: |
     Este endpoint devuelve el conteo de equipos por anillo.
@@ -119,7 +119,7 @@ types:
             type: conteoEquiposPorAnilloResponse
             example: !include responses/m6/getConteoEquiposPorAnilloResponse.json
 
-/getDisponibilidadPuertosPorAnillo:
+/m6/getDisponibilidadPuertosPorAnillo:
   displayName: GetDisponibilidadPuertosPorAnillo
   description: |
     Este endpoint devuelve la disponibilidad de puertos por anillo.
@@ -137,5 +137,18 @@ types:
             type: disponibilidadPuertosPorAnilloResponse
             example: !include responses/m6/getDisponibilidadPuertosPorAnilloResponse.json
 
+
+/m6/getAnillosLista:
+  displayName: GetAnillosLista
+  description: |
+    Este endpoint devuelve un listado de anillos disponibles.
+  get:
+    description: GET - Listado de anillos disponibles
+    responses:
+      200:
+        body:
+          application/json:
+            type: disponibilidadPuertosPorAnilloResponse
+            example: !include responses/m6/getAnillosListaResponse.json
 
       
