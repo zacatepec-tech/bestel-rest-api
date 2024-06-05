@@ -42,6 +42,23 @@ traits:
             example: !include responses/orbit/coverageArray.json
             type: !include data-types/response/orbit/coverageResponseDT.raml
 
+/coverage/ping:
+  is:
+    - hasRequestID
+  get:
+    displayName: ORBIT PING
+    description: "Este endpoint devuelve si esta activo el servicio."
+    
+    responses:
+      400:
+        body:
+          application/json:
+            example: !include responses/error/400.json
+      "200":
+        body:
+          application/json:
+            example: !include responses/orbit/ping/pingObject.json
+            type: !include data-types/response/orbit/ping/pingResponse.raml
 
 
 
