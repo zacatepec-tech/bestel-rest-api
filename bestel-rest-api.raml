@@ -152,4 +152,18 @@ types:
             type: anillosListaReponse
             example: !include responses/m6/getAnillosListaResponse.json
 
+/m6/getAnillosPorNetworkLocation:
+  displayName: getAnillosPorNetworkLocation
+  description: |
+    Este endpoint devuelve listado de anillos por locacion de .
+  get:
+    description: GET - Listado de anillos disponibles
+    responses:
+      200:
+        body:
+          application/json:
+            type: anillosListaReponse
+            example: !include responses/m6/getAnillosListaResponse.json
+
+
       
