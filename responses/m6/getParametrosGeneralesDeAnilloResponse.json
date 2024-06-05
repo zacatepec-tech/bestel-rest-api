@@ -1,0 +1,24 @@
+{
+	"NS_ID": 1093,
+	"NS_NM_SHORT": "ANILLO 6100 SE",
+	"NS_NM_LONG": "ANILLO DWDM 6100 SUERESTE",
+	"DESC": "ANILLO DWDM 6100 SUERESTE",
+	"Params": [
+		{
+			"VALUE_LABEL": "mx.bs.tcn",
+			"CA_VALUE": "IP"
+		},
+		{
+			"VALUE_LABEL": "mx.bs.cpc.ttl",
+			"CA_VALUE": "100 GE"
+		},
+		{
+			"VALUE_LABEL": "mx.bs.cpc.dsp",
+			"CA_VALUE": "0"
+		},
+		{
+			"VALUE_LABEL": "mx.bs.fch.dsp",
+			"CA_VALUE": "no disponi"
+		}
+	]
+}

@@ -1,0 +1,59 @@
+#%RAML 1.0 DataType
+type: object
+properties:
+  NS_ID: 
+    type: integer
+    example: 1093
+  NS_NM_SHORT:
+    type: string
+    example: "ANILLO 6100 SE"
+  NS_NM_LONG:
+    type: string
+    example: "ANILLO DWDM 6100 SUERESTE"
+  Equipos:
+    type: array
+    items:
+      type: object
+      properties:
+        NS_COMP_NM:
+          type: string
+          example: "6100BESTIRO00.01"
+        NETWORK_LOCATION:
+          type: string
+          example: "TPPLXG01W01"
+        NETWORK_ELEMENT:
+          type: string
+          example: "TPPLXG01"
+        EQUIPMENT_NAME:
+          type: string
+          example: "NA"
+        SPEC:
+          type: string
+          example: "TPPLXG01W01 - HUAWEI DWDM-SHELF, 6100-OLA, OLA-NE116"
+        Ports:
+          type: object
+          properties:
+            TOTALPORTSINSTALLED:
+              type: integer
+              example: 8
+            AVAILABLEPORTS:
+              type: integer
+              example: 4
+            PENDINGPORTS:
+              type: integer
+              example: 0
+            INSERVICEPORTS:
+              type: integer
+              example: 4
+            PENDDISCPORTS:
+              type: integer
+              example: 0
+            TROUBLEDPORTS:
+              type: integer
+              example: 0
+            RESERVEDPORTS:
+              type: integer
+              example: 0
+            RESERVEDCAPACITYPORTS:
+              type: integer
+              example: 0
