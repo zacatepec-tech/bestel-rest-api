@@ -1,0 +1,94 @@
+{
+   "EQUIPMENT_ID": 4217,
+   "Ports": [],
+   "Equipos":    [
+            {
+         "MOUNTING_POSITION_NUMBER": "01",
+         "SLOT_ASSIGNMENT_NAME": "REPISA AA",
+         "EQUIPMENT_ID": 0,
+         "EQUIPMENT_NAME": "",
+         "INSTALL_DATE": "",
+         "EQUIP_NAME_ALIAS": "",
+         "Specification": {},
+         "ConditionCodes": []
+      },
+            {
+         "MOUNTING_POSITION_NUMBER": "02",
+         "SLOT_ASSIGNMENT_NAME": "REPISA AB",
+         "EQUIPMENT_ID": 0,
+         "EQUIPMENT_NAME": "",
+         "INSTALL_DATE": "",
+         "EQUIP_NAME_ALIAS": "",
+         "Specification": {},
+         "ConditionCodes": []
+      },
+            {
+         "MOUNTING_POSITION_NUMBER": "03",
+         "SLOT_ASSIGNMENT_NAME": "REPISA AC",
+         "EQUIPMENT_ID": 0,
+         "EQUIPMENT_NAME": "",
+         "INSTALL_DATE": "",
+         "EQUIP_NAME_ALIAS": "",
+         "Specification": {},
+         "ConditionCodes": []
+      },
+            {
+         "MOUNTING_POSITION_NUMBER": "04",
+         "SLOT_ASSIGNMENT_NAME": "REPISA AD",
+         "EQUIPMENT_ID": 0,
+         "EQUIPMENT_NAME": "",
+         "INSTALL_DATE": "",
+         "EQUIP_NAME_ALIAS": "",
+         "Specification": {},
+         "ConditionCodes": []
+      },
+            {
+         "MOUNTING_POSITION_NUMBER": "05",
+         "SLOT_ASSIGNMENT_NAME": "REPISA AE",
+         "EQUIPMENT_ID": 0,
+         "EQUIPMENT_NAME": "",
+         "INSTALL_DATE": "",
+         "EQUIP_NAME_ALIAS": "",
+         "Specification": {},
+         "ConditionCodes": []
+      },
+            {
+         "MOUNTING_POSITION_NUMBER": "06",
+         "SLOT_ASSIGNMENT_NAME": "REPISA AF",
+         "EQUIPMENT_ID": 0,
+         "EQUIPMENT_NAME": "",
+         "INSTALL_DATE": "",
+         "EQUIP_NAME_ALIAS": "",
+         "Specification": {},
+         "ConditionCodes": []
+      },
+            {
+         "MOUNTING_POSITION_NUMBER": "07",
+         "SLOT_ASSIGNMENT_NAME": "REPISA AG",
+         "EQUIPMENT_ID": 4220,
+         "EQUIPMENT_NAME": "CLM",
+         "INSTALL_DATE": "2012/07/26 11:18:24",
+         "EQUIP_NAME_ALIAS": "",
+         "Specification":          {
+            "eQUIPMENT_SPEC_ID": 1279,
+            "VENDOR_NAME": "ERICSSON",
+            "VENDOR_PART_NUMBER": "SHELF3",
+            "EQUIPMENT_ACRONYM": "SHELF3",
+            "DESCRIPTION": "SHELF PARA XE DE 85 POSICIONES",
+            "VENDOR_MODEL_NUMBER": "",
+            "EQUIPSPEC_TYPE": "VOICE-SHELF"
+         },
+         "ConditionCodes": []
+      },
+            {
+         "MOUNTING_POSITION_NUMBER": "08",
+         "SLOT_ASSIGNMENT_NAME": "REPISA AH",
+         "EQUIPMENT_ID": 0,
+         "EQUIPMENT_NAME": "",
+         "INSTALL_DATE": "",
+         "EQUIP_NAME_ALIAS": "",
+         "Specification": {},
+         "ConditionCodes": []
+      }
+   ]
+}

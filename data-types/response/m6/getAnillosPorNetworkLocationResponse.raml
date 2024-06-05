@@ -1,0 +1,36 @@
+#%RAML 1.0 DataType
+
+type: object
+properties:
+  NetworkLocations:
+    type: string
+    example: "AHMEXS01W01"
+  Anillos:
+    type: array
+    items:
+      type: object
+      properties:
+        NS_ID:
+          type: integer
+          example: 1000
+        NS_NM_SHORT:
+          type: string
+          example: "ANILLO CH40S"
+        NS_NM_LONG:
+          type: string
+          example: "ANILLO CH40S FRECUENCIA 121.0 THZ"
+        NS_DT_CREATED:
+          type: string
+          example: "2012/09/13 12:44:17"
+        TCN:
+          type: string
+          example: "NA"
+        CPCTTL:
+          type: string
+          example: "NA"
+        CPCDSP:
+          type: string
+          example: "NA"
+        FCHDSP:
+          type: string
+          example: "NA"
