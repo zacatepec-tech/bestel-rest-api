@@ -64,5 +64,78 @@ traits:
 
 
 
+types:
+  parametrosGeneralesDeAnilloResponse: !include data-types/response/m6/getParametrosGeneralesDeAnilloResponse.raml
+  networkLocationsResponse: !include data-types/response/m6/getNetworkLocationsResponse.raml
+  conteoEquiposPorAnilloResponse: !include data-types/response/m6/getConteoEquiposPorAnilloResponse.raml
+  disponibilidadPuertosPorAnilloResponse: !include data-types/response/m6/getDisponibilidadPuertosPorAnilloResponse.raml
+
+/getParametrosGeneralesDeAnillo:
+  displayName: GetParametrosGeneralesDeAnillo
+  description: |
+    Este endpoint devuelve los parámetros generales de un anillo.
+  get:
+    description: GET - parametrosGeneralesDeAnillo
+    queryParameters:
+      ns_nm:
+        type: string
+        required: false
+        default: "null"
+    responses:
+      200:
+        body:
+          application/json:
+            type: parametrosGeneralesDeAnilloResponse
+            example: !include responses/m6/getParametrosGeneralesDeAnilloResponse.json
+
+/getNetworkLocations:
+  displayName: GetNetworkLocations
+  description: |
+    Este endpoint devuelve las ubicaciones de red.
+  get:
+    description: GET - networkLocations
+    responses:
+      200:
+        body:
+          application/json:
+            type: networkLocationsResponse
+            example: !include responses/m6/getNetworkLocationsResponse.json
+
+/getConteoEquiposPorAnillo:
+  displayName: GetConteoEquiposPorAnillo
+  description: |
+    Este endpoint devuelve el conteo de equipos por anillo.
+  get:
+    description: GET - conteoEquiposPorAnillo
+    queryParameters:
+      ns_nm:
+        type: string
+        required: false
+        default: "null"
+    responses:
+      200:
+        body:
+          application/json:
+            type: conteoEquiposPorAnilloResponse
+            example: !include responses/m6/getConteoEquiposPorAnilloResponse.json
+
+/getDisponibilidadPuertosPorAnillo:
+  displayName: GetDisponibilidadPuertosPorAnillo
+  description: |
+    Este endpoint devuelve la disponibilidad de puertos por anillo.
+  get:
+    description: GET - disponibilidadPuertosPorAnillo
+    queryParameters:
+      ns_nm:
+        type: string
+        required: false
+        default: "null"
+    responses:
+      200:
+        body:
+          application/json:
+            type: disponibilidadPuertosPorAnilloResponse
+            example: !include responses/m6/getDisponibilidadPuertosPorAnilloResponse.json
+
 
       
