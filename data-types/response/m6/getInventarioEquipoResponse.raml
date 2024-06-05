@@ -1,0 +1,59 @@
+#%RAML 1.0 DataType
+
+type: object
+properties:
+  EQUIPMENT_ID:
+    type: number
+    example: 4217
+  Ports:
+    type: array
+  Equipos:
+    type: array
+    items:
+      type: object
+      properties:
+        MOUNTING_POSITION_NUMBER:
+          type: string
+          example: "07"
+        SLOT_ASSIGNMENT_NAME:
+          type: string
+          example: "REPISA AG"
+        EQUIPMENT_ID:
+          type: number
+          example: 4220
+        EQUIPMENT_NAME:
+          type: string
+          example: "CLM"
+        INSTALL_DATE:
+          type: string
+          example: "2012/07/26 11:18:24"
+        EQUIP_NAME_ALIAS:
+          type: string
+          example: "NA"
+        Specification:
+          type: object
+          properties:
+            EQUIPMENT_SPEC_ID:
+             type: number
+             example: 1279
+            VENDOR_NAME:
+             type: string
+             example: "ERICSSON"
+            VENDOR_PART_NUMBER:
+             type: string
+             example: "SHELF3"
+            EQUIPMENT_ACRONYM:
+             type: string
+             example: "SHELF3"
+            DESCRIPTION:
+             type: string
+             example: "SHELF PARA XE DE 85 POSICIONES"
+            VENDOR_MODEL_NUMBER:
+             type: string
+             example: ""
+            EQUIPSPEC_TYPE:
+             type: string
+             example: "VOICE-SHELF" 
+        ConditionCodes:
+          type: array
+          example: []

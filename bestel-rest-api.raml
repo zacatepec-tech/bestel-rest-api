@@ -65,6 +65,9 @@ traits:
 
 
 types:
+  getInventarioEquipoResponse: !include data-types/response/m6/getInventarioEquipoResponse.raml
+  getDetalleNetworkLocationResponse: !include data-types/response/m6/getDetalleNetworkLocationResponse.raml
+  anillosPorNetworkLocationResponse: !include data-types/response/m6/getAnillosPorNetworkLocationResponse.raml
   anillosListaReponse: !include data-types/response/m6/getAnillosListaReponse.raml
   parametrosGeneralesDeAnilloResponse: !include data-types/response/m6/getParametrosGeneralesDeAnilloResponse.raml
   networkLocationsResponse: !include data-types/response/m6/getNetworkLocationsResponse.raml
@@ -158,9 +161,50 @@ types:
     Este endpoint devuelve listado de anillos por locacion de red.
   get:
     description: GET - Listado de anillos por locacion de red
+    queryParameters:
+      clli_code:
+        type: string
+        required: false
+        default: "null"
     responses:
       200:
         body:
           application/json:
-            type: anillosListaReponse
+            type: anillosPorNetworkLocationResponse
             example: !include responses/m6/getAnillosPorNetworkLocationResponse.json
+
+/m6/getDetalleNetworkLocation:
+  displayName: getDetalleNetworkLocation
+  description: |
+    Este endpoint devuelve el detalle de una locacion de red.
+  get:
+    description: GET - Detalle de una locacion de red
+    queryParameters:
+      arg_code:
+        type: string
+        required: false
+        default: "null"
+    responses:
+      200:
+        body:
+          application/json:
+            type: getDetalleNetworkLocationResponse
+            example: !include responses/m6/getDetalleNetworkLocationResponse.json
+
+/m6/getInventarioEquipo:
+  displayName: getInventarioEquipo
+  description: |
+    Este endpoint devuelve informacion del inventario del equipo disponible.
+  get:
+    description: GET - Devuelve informacion del inventario del equipo disponible
+    queryParameters:
+      equipment_id:
+        type: string
+        required: false
+        default: "null"
+    responses:
+      200:
+        body:
+          application/json:
+            type: getInventarioEquipoResponse
+            example: !include responses/m6/getInventarioEquipoResponse.json
