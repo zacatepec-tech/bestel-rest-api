@@ -8,12 +8,6 @@ protocols:
   - HTTPS
   - HTTP
 documentation:
-  - title: Productos
-    content: |
-      Los endpoints relacionados con productos.
-  - title: Usuarios
-    content: |
-      Los endpoints relacionados con usuarios.
   -
     content: "API perrona bien chingona y que chingue su madre el america "
     title: Home
@@ -23,7 +17,7 @@ traits:
 
 
 /orbit/coverage:
-  displayName: ORBIT coverge
+  displayName: coverge
   is:
     - hasRequestID
   get:
@@ -50,7 +44,7 @@ traits:
             type: !include data-types/response/orbit/coverage/coverageResponseDT.raml
 
 /orbit/coverage/ping:
-  displayName: ORBIT ping
+  displayName: ping
   is:
     - hasRequestID
   get:
@@ -70,149 +64,3 @@ traits:
 
 
 
-
-
-types:
-  getInventarioEquipoResponse: !include data-types/response/m6/getInventarioEquipoResponse.raml
-  getDetalleNetworkLocationResponse: !include data-types/response/m6/getDetalleNetworkLocationResponse.raml
-  anillosPorNetworkLocationResponse: !include data-types/response/m6/getAnillosPorNetworkLocationResponse.raml
-  anillosListaReponse: !include data-types/response/m6/getAnillosListaReponse.raml
-  parametrosGeneralesDeAnilloResponse: !include data-types/response/m6/getParametrosGeneralesDeAnilloResponse.raml
-  networkLocationsResponse: !include data-types/response/m6/getNetworkLocationsResponse.raml
-  conteoEquiposPorAnilloResponse: !include data-types/response/m6/getConteoEquiposPorAnilloResponse.raml
-  disponibilidadPuertosPorAnilloResponse: !include data-types/response/m6/getDisponibilidadPuertosPorAnilloResponse.raml
-
-/m6/getParametrosGeneralesDeAnillo:
-  displayName: GetParametrosGeneralesDeAnillo
-  description: |
-    Este endpoint devuelve los parámetros generales de un anillo.
-  get:
-    description: GET - parametrosGeneralesDeAnillo
-    queryParameters:
-      ns_nm:
-        type: string
-        required: false
-        default: "null"
-    responses:
-      200:
-        body:
-          application/json:
-            type: parametrosGeneralesDeAnilloResponse
-            example: !include responses/m6/getParametrosGeneralesDeAnilloResponse.json
-
-/m6/getNetworkLocations:
-  displayName: GetNetworkLocations
-  description: |
-    Este endpoint devuelve las ubicaciones de red.
-  get:
-    description: GET - networkLocations
-    responses:
-      200:
-        body:
-          application/json:
-            type: networkLocationsResponse
-            example: !include responses/m6/getNetworkLocationsResponse.json
-
-/m6/getConteoEquiposPorAnillo:
-  displayName: GetConteoEquiposPorAnillo
-  description: |
-    Este endpoint devuelve el conteo de equipos por anillo.
-  get:
-    description: GET - conteoEquiposPorAnillo
-    queryParameters:
-      ns_nm:
-        type: string
-        required: false
-        default: "null"
-    responses:
-      200:
-        body:
-          application/json:
-            type: conteoEquiposPorAnilloResponse
-            example: !include responses/m6/getConteoEquiposPorAnilloResponse.json
-
-/m6/getDisponibilidadPuertosPorAnillo:
-  displayName: GetDisponibilidadPuertosPorAnillo
-  description: |
-    Este endpoint devuelve la disponibilidad de puertos por anillo.
-  get:
-    description: GET - disponibilidadPuertosPorAnillo
-    queryParameters:
-      ns_nm:
-        type: string
-        required: false
-        default: "null"
-    responses:
-      200:
-        body:
-          application/json:
-            type: disponibilidadPuertosPorAnilloResponse
-            example: !include responses/m6/getDisponibilidadPuertosPorAnilloResponse.json
-
-
-/m6/getAnillosLista:
-  displayName: GetAnillosLista
-  description: |
-    Este endpoint devuelve un listado de anillos disponibles.
-  get:
-    description: GET - Listado de anillos disponibles
-    responses:
-      200:
-        body:
-          application/json:
-            type: anillosListaReponse
-            example: !include responses/m6/getAnillosListaResponse.json
-
-/m6/getAnillosPorNetworkLocation:
-  displayName: getAnillosPorNetworkLocation
-  description: |
-    Este endpoint devuelve listado de anillos por locacion de red.
-  get:
-    description: GET - Listado de anillos por locacion de red
-    queryParameters:
-      clli_code:
-        type: string
-        required: false
-        default: "null"
-    responses:
-      200:
-        body:
-          application/json:
-            type: anillosPorNetworkLocationResponse
-            example: !include responses/m6/getAnillosPorNetworkLocationResponse.json
-
-/m6/getDetalleNetworkLocation:
-  displayName: getDetalleNetworkLocation
-  description: |
-    Este endpoint devuelve el detalle de una locacion de red.
-  get:
-    description: GET - Detalle de una locacion de red
-    queryParameters:
-      arg_code:
-        type: string
-        required: false
-        default: "null"
-    responses:
-      200:
-        body:
-          application/json:
-            type: getDetalleNetworkLocationResponse
-            example: !include responses/m6/getDetalleNetworkLocationResponse.json
-
-/m6/getInventarioEquipo:
-  displayName: getInventarioEquipo
-  description: |
-    Este endpoint devuelve informacion del inventario del equipo disponible.
-  get:
-    description: GET - Devuelve informacion del inventario del equipo disponible
-    queryParameters:
-      equipment_id:
-        type: string
-        required: false
-        default: "null"
-    responses:
-      200:
-        body:
-          application/json:
-            type: getInventarioEquipoResponse
-            example: !include responses/m6/getInventarioEquipoResponse.json
