@@ -82,7 +82,7 @@ types:
   getSerieV2Response: !include data-types/response/m6/getSerieV2Response.raml
   getTelephoneNumber800Response: !include data-types/response/m6/getTelephoneNumber800Response.raml
   notificacionToSFResponse: !include data-types/response/m6/notificacionToSFResponse.raml
-  updateReservationRequestType: !include data-types/response/m6/updateReservationRequestType.raml
+  updateReservationRequest: !include data-types/response/m6/updateReservationRequest.raml
   updateReservationResponse: !include data-types/response/m6/updateReservationResponse.raml
   reserveTnResponse: !include data-types/response/m6/reserveTnResponse.raml
 
@@ -296,7 +296,7 @@ types:
     responses:
       200:
         body:
-          application/xml:
+          application/json:
             type: getNIRResponse
             example: !include examples/getNIRResponse.json
 
@@ -321,7 +321,7 @@ types:
     responses:
       200:
         body:
-          application/xml:
+          application/json:
             type: getSerieV2Response
             example: !include examples/getSerieV2Response.json
 
@@ -354,7 +354,7 @@ types:
     responses:
       200:
         body:
-          application/xml:
+          application/json:
             type: getTelephoneNumber800Response
             example: !include examples/getTelephoneNumber800Response.json
 
@@ -379,7 +379,7 @@ types:
     responses:
       200:
         body:
-          application/xml:
+          application/json:
             type: notificacionToSFResponse
             example: !include examples/notificacionToSFResponse.json
 
@@ -387,84 +387,30 @@ types:
   displayName: UpdateReservation
   description: |
     Este endpoint actualiza una reserva.
-  post:
-    description: POST - updateReservation
+  path:
+    description: PATH - updateReservation
     body:
-      application/xml:
-        example: |
-          <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:src="http://src.oracle.com/">
-             <soapenv:Header>
-                <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
-                   <wsse:UsernameToken wsu:Id="UsernameToken-37" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
-                      <wsse:Username>occ_app_int</wsse:Username>
-                      <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">occ_app_int</wsse:Password>
-                   </wsse:UsernameToken>
-                </wsse:Security>
-             </soapenv:Header>
-             <soapenv:Body>
-                <src:updateReservationRequest>
-                   <!--Optional:-->
-                   <updateReservationRequestType>
-                      <action>UPDATE</action>
-                      <reservationId>2040</reservationId>
-                      <expirydate>2024-06-29</expirydate>
-                   </updateReservationRequestType>
-                </src:updateReservationRequest>
-             </soapenv:Body>
-          </soapenv:Envelope>
+      application/json:
+        type: updateReservationRequest
+        example: !include examples/updateReservationRequest.json
     responses:
       200:
         body:
-          application/xml:
+          application/json:
             type: updateReservationResponse
             example: !include examples/updateReservationResponse.json
 
-/m6/deleteReservation:
-  displayName: DeleteReservation
-  description: |
-    Este endpoint elimina una reserva.
-  delete:
-    description: DELETE - deleteReservation
-    body:
-      application/xml:
-        example: |
-          <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:src="http://src.oracle.com/">
-             <soapenv:Header>
-                <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
-                   <wsse:UsernameToken wsu:Id="UsernameToken-37" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
-                      <wsse:Username>occ_app_int</wsse:Username>
-                      <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">occ_app_int</wsse:Password>
-                   </wsse:UsernameToken>
-                </wsse:Security>
-             </soapenv:Header>
-             <soapenv:Body>
-                <src:updateReservationRequest>
-                   <!--Optional:-->
-                   <updateReservationRequestType>
-                      <action>DELETE</action>
-                      <reservationId>1161</reservationId>
-                      <expirydate/>
-                   </updateReservationRequestType>
-                </src:updateReservationRequest>
-             </soapenv:Body>
-          </soapenv:Envelope>
-    responses:
-      200:
-        body:
-          application/xml:
-            type: updateReservationResponse
-            example: !include examples/deleteReservationResponse.json
 
 /m6/reserveTn:
   displayName: Reserve TN
   post:
     description: Endpoint para reservar números telefónicos.
     body:
-      application/xml:
+      application/json:
         type: reserveTnResponse
     responses:
       200:
         body:
-          application/xml:
+          application/json:
             type: reserveTnResponse
             example: !include examples/reserveTnResponse.json            
