@@ -1,0 +1,47 @@
+#%RAML 1.0 DataType
+type: object
+properties:
+  buscarTelephoneNumberResponseV2:
+    type: object
+    properties:
+      checkPointID:
+        type: integer
+        example: 2323
+      telephoneNumberArray:
+        type: array
+        items:
+          type: object
+          properties:
+            nbrInvID:
+              type: integer
+              example: 4414970
+            nir:
+              type: integer
+              example: 222
+            serie:
+              type: integer
+              example: 379
+            linea:
+              type: integer
+              example: 1392
+            sufix:
+              type: integer
+              example: 0
+            identText:
+              type: string
+              example: "2223791392"
+            formattedIdentText:
+              type: string
+              example: "222 3791392-0"
+            telNbrTypeCD:
+              type: string
+              example: "WTN"
+            tniCategoryDesc:
+              type: string
+              example: "Assignable Numbers"
+            tniSubcategoryDesc:
+              type: string
+              example: "Bestel"
+            sfStrucFormatNm:
+              type: string
+              example: "TN-MX BESTEL"

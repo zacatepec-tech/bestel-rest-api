@@ -1,0 +1,23 @@
+#%RAML 1.0 DataType
+type: object
+properties:
+  getNIRResponse:
+    type: object
+    properties:
+      ns0:getNIRResponse:
+        type: object
+        properties:
+          ns3:buscarNIRsResponse:
+            type: object
+            properties:
+              ns3:buscarNIRsByValuesResponse:
+                type: object
+                properties:
+                  ns6:nirArray:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        ns15:nir:
+                          type: integer
+                          example: 771

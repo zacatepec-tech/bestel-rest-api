@@ -1,0 +1,12 @@
+{
+  "buscarTelephoneNumber800Response": {
+    "checkPointID": 0,
+    "telephone": {
+      "nbrInvID": 8074638,
+      "nir": 800,
+      "serie": 1,
+      "identText": "8000019782",
+      "ocnName": "BESTEL"
+    }
+  }
+}

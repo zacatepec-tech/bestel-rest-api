@@ -1,0 +1,137 @@
+{
+  "buscarTelephoneNumberResponseV2": {
+    "checkPointID": 2323,
+    "telephoneNumberArray": [
+      {
+        "nbrInvID": 4414970,
+        "nir": 222,
+        "serie": 379,
+        "linea": 1392,
+        "sufix": 0,
+        "identText": "2223791392",
+        "formattedIdentText": "222 3791392-0",
+        "telNbrTypeCD": "WTN",
+        "tniCategoryDesc": "Assignable Numbers",
+        "tniSubcategoryDesc": "Bestel",
+        "sfStrucFormatNm": "TN-MX BESTEL"
+      },
+      {
+        "nbrInvID": 4416397,
+        "nir": 222,
+        "serie": 379,
+        "linea": 2819,
+        "sufix": 0,
+        "identText": "2223792819",
+        "formattedIdentText": "222 3792819-0",
+        "telNbrTypeCD": "WTN",
+        "tniCategoryDesc": "Assignable Numbers",
+        "tniSubcategoryDesc": "Bestel",
+        "sfStrucFormatNm": "TN-MX BESTEL"
+      },
+      {
+        "nbrInvID": 4418023,
+        "nir": 222,
+        "serie": 379,
+        "linea": 4445,
+        "sufix": 0,
+        "identText": "2223794445",
+        "formattedIdentText": "222 3794445-0",
+        "telNbrTypeCD": "WTN",
+        "tniCategoryDesc": "Assignable Numbers",
+        "tniSubcategoryDesc": "Bestel",
+        "sfStrucFormatNm": "TN-MX BESTEL"
+      },
+      {
+        "nbrInvID": 4414923,
+        "nir": 222,
+        "serie": 379,
+        "linea": 1345,
+        "sufix": 0,
+        "identText": "2223791345",
+        "formattedIdentText": "222 3791345-0",
+        "telNbrTypeCD": "WTN",
+        "tniCategoryDesc": "Assignable Numbers",
+        "tniSubcategoryDesc": "Bestel",
+        "sfStrucFormatNm": "TN-MX BESTEL"
+      },
+      {
+        "nbrInvID": 4414450,
+        "nir": 222,
+        "serie": 379,
+        "linea": 872,
+        "sufix": 0,
+        "identText": "2223790872",
+        "formattedIdentText": "222 3790872-0",
+        "telNbrTypeCD": "WTN",
+        "tniCategoryDesc": "Assignable Numbers",
+        "tniSubcategoryDesc": "Bestel",
+        "sfStrucFormatNm": "TN-MX BESTEL"
+      },
+      {
+        "nbrInvID": 4414019,
+        "nir": 222,
+        "serie": 379,
+        "linea": 441,
+        "sufix": 0,
+        "identText": "2223790441",
+        "formattedIdentText": "222 3790441-0",
+        "telNbrTypeCD": "WTN",
+        "tniCategoryDesc": "Assignable Numbers",
+        "tniSubcategoryDesc": "Bestel",
+        "sfStrucFormatNm": "TN-MX BESTEL"
+      },
+      {
+        "nbrInvID": 4414018,
+        "nir": 222,
+        "serie": 379,
+        "linea": 44,
+        "sufix": 0,
+        "identText": "2223790440",
+        "formattedIdentText": "222 3790440-0",
+        "telNbrTypeCD": "WTN",
+        "tniCategoryDesc": "Assignable Numbers",
+        "tniSubcategoryDesc": "Bestel",
+        "sfStrucFormatNm": "TN-MX BESTEL"
+      },
+      {
+        "nbrInvID": 4414111,
+        "nir": 222,
+        "serie": 379,
+        "linea": 533,
+        "sufix": 0,
+        "identText": "2223790533",
+        "formattedIdentText": "222 3790533-0",
+        "telNbrTypeCD": "WTN",
+        "tniCategoryDesc": "Assignable Numbers",
+        "tniSubcategoryDesc": "Bestel",
+        "sfStrucFormatNm": "TN-MX BESTEL"
+      },
+      {
+        "nbrInvID": 4417999,
+        "nir": 222,
+        "serie": 379,
+        "linea": 4421,
+        "sufix": 0,
+        "identText": "2223794421",
+        "formattedIdentText": "222 3794421-0",
+        "telNbrTypeCD": "WTN",
+        "tniCategoryDesc": "Assignable Numbers",
+        "tniSubcategoryDesc": "Bestel",
+        "sfStrucFormatNm": "TN-MX BESTEL"
+      },
+      {
+        "nbrInvID": 4417876,
+        "nir": 222,
+        "serie": 379,
+        "linea": 4298,
+        "sufix": 0,
+        "identText": "2223794298",
+        "formattedIdentText": "222 3794298-0",
+        "telNbrTypeCD": "WTN",
+        "tniCategoryDesc": "Assignable Numbers",
+        "tniSubcategoryDesc": "Bestel",
+        "sfStrucFormatNm": "TN-MX BESTEL"
+      }
+    ]
+  }
+}

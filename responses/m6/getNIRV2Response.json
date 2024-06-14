@@ -1,0 +1,23 @@
+{
+  "buscarNIRsResponseV2": {
+    "buscarNIRsByValuesResponse": {
+      "nirArray": [
+        {
+          "nir": 122
+        },
+        {
+          "nir": 123
+        },
+        {
+          "nir": 222
+        },
+        {
+          "nir": 228
+        },
+        {
+          "nir": 229
+        }
+      ]
+    }
+  }
+}

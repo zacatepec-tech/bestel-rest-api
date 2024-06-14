@@ -1,0 +1,18 @@
+{
+  "getNIRResponse": {
+    "ns0:getNIRResponse": {
+      "ns3:buscarNIRsResponse": {
+        "ns3:buscarNIRsByValuesResponse": {
+          "ns6:nirArray": [
+            {
+              "ns15:nir": 771
+            },
+            {
+              "ns15:nir": 775
+            }
+          ]
+        }
+      }
+    }
+  }
+}

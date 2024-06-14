@@ -1,0 +1,26 @@
+{
+  "buscarSeriesResponseV2": {
+    "buscarSeriesByValuesResponseArray": [
+      {
+        "serie": {
+          "serie": 379
+        }
+      },
+      {
+        "serie": {
+          "serie": 454
+        }
+      },
+      {
+        "serie": {
+          "serie": 885
+        }
+      },
+      {
+        "serie": {
+          "serie": 886
+        }
+      }
+    ]
+  }
+}

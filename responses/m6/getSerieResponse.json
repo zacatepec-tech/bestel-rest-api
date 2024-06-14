@@ -1,0 +1,9 @@
+{
+  "buscarSeriesResponse": {
+    "buscarSeriesByValuesResponseArray": [
+      {
+        "serie": 233
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "updateReservationRequestResponse": {
+    "return": {
+      "status": "Success. Reservation 1161 has been deleted."
+    }
+  }
+}

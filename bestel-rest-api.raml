@@ -16,8 +16,7 @@ traits:
   hasRequestID: !include exchange_modules/702f7afc-d4ce-4692-8c4e-a0418d451c60/bearer-token-id/1.0.0/bearer-token-id.raml
 
 
-/orbit/coverage:
-  displayName: coverge
+/orbit/coverage/orbit:
   is:
     - hasRequestID
   get:
@@ -43,8 +42,7 @@ traits:
             example: !include responses/orbit/coverage/coverageArray.json
             type: !include data-types/response/orbit/coverage/coverageResponseDT.raml
 
-/orbit/ping:
-  displayName: ping
+/orbit/coverage/ping:
   is:
     - hasRequestID
   get:
@@ -64,3 +62,409 @@ traits:
 
 
 
+
+
+types:
+  getInventarioEquipoResponse: !include data-types/response/m6/getInventarioEquipoResponse.raml
+  getDetalleNetworkLocationResponse: !include data-types/response/m6/getDetalleNetworkLocationResponse.raml
+  anillosPorNetworkLocationResponse: !include data-types/response/m6/getAnillosPorNetworkLocationResponse.raml
+  anillosListaReponse: !include data-types/response/m6/getAnillosListaReponse.raml
+  parametrosGeneralesDeAnilloResponse: !include data-types/response/m6/getParametrosGeneralesDeAnilloResponse.raml
+  networkLocationsResponse: !include data-types/response/m6/getNetworkLocationsResponse.raml
+  conteoEquiposPorAnilloResponse: !include data-types/response/m6/getConteoEquiposPorAnilloResponse.raml
+  disponibilidadPuertosPorAnilloResponse: !include data-types/response/m6/getDisponibilidadPuertosPorAnilloResponse.raml
+  
+
+  getNIRV2Response: !include data-types/response/m6/getNIRV2Response.raml
+  getSerieResponse: !include data-types/response/m6/getSerieResponse.raml
+  getTelephoneNumberV2Response: !include data-types/response/m6/getTelephoneNumberV2Response.raml
+  getNIRResponse: !include data-types/response/m6/getNIRResponse.raml
+  getSerieV2Response: !include data-types/response/m6/getSerieV2Response.raml
+  getTelephoneNumber800Response: !include data-types/response/m6/getTelephoneNumber800Response.raml
+  notificacionToSFResponse: !include data-types/response/m6/notificacionToSFResponse.raml
+  updateReservationRequestType: !include data-types/response/m6/updateReservationRequestType.raml
+  updateReservationResponse: !include data-types/response/m6/updateReservationResponse.raml
+  reserveTnResponse: !include data-types/response/m6/reserveTnResponse.raml
+
+/m6/getParametrosGeneralesDeAnillo:
+  displayName: GetParametrosGeneralesDeAnillo
+  description: |
+    Este endpoint devuelve los parámetros generales de un anillo.
+  get:
+    description: GET - parametrosGeneralesDeAnillo
+    queryParameters:
+      ns_nm:
+        type: string
+        required: false
+        default: "null"
+    responses:
+      200:
+        body:
+          application/json:
+            type: parametrosGeneralesDeAnilloResponse
+            example: !include responses/m6/getParametrosGeneralesDeAnilloResponse.json
+
+/m6/getNetworkLocations:
+  displayName: GetNetworkLocations
+  description: |
+    Este endpoint devuelve las ubicaciones de red.
+  get:
+    description: GET - networkLocations
+    responses:
+      200:
+        body:
+          application/json:
+            type: networkLocationsResponse
+            example: !include responses/m6/getNetworkLocationsResponse.json
+
+/m6/getConteoEquiposPorAnillo:
+  displayName: GetConteoEquiposPorAnillo
+  description: |
+    Este endpoint devuelve el conteo de equipos por anillo.
+  get:
+    description: GET - conteoEquiposPorAnillo
+    queryParameters:
+      ns_nm:
+        type: string
+        required: false
+        default: "null"
+    responses:
+      200:
+        body:
+          application/json:
+            type: conteoEquiposPorAnilloResponse
+            example: !include responses/m6/getConteoEquiposPorAnilloResponse.json
+
+/m6/getDisponibilidadPuertosPorAnillo:
+  displayName: GetDisponibilidadPuertosPorAnillo
+  description: |
+    Este endpoint devuelve la disponibilidad de puertos por anillo.
+  get:
+    description: GET - disponibilidadPuertosPorAnillo
+    queryParameters:
+      ns_nm:
+        type: string
+        required: false
+        default: "null"
+    responses:
+      200:
+        body:
+          application/json:
+            type: disponibilidadPuertosPorAnilloResponse
+            example: !include responses/m6/getDisponibilidadPuertosPorAnilloResponse.json
+
+
+/m6/getAnillosLista:
+  displayName: GetAnillosLista
+  description: |
+    Este endpoint devuelve un listado de anillos disponibles.
+  get:
+    description: GET - Listado de anillos disponibles
+    responses:
+      200:
+        body:
+          application/json:
+            type: anillosListaReponse
+            example: !include responses/m6/getAnillosListaResponse.json
+
+/m6/getAnillosPorNetworkLocation:
+  displayName: getAnillosPorNetworkLocation
+  description: |
+    Este endpoint devuelve listado de anillos por locacion de red.
+  get:
+    description: GET - Listado de anillos por locacion de red
+    queryParameters:
+      clli_code:
+        type: string
+        required: false
+        default: "null"
+    responses:
+      200:
+        body:
+          application/json:
+            type: anillosPorNetworkLocationResponse
+            example: !include responses/m6/getAnillosPorNetworkLocationResponse.json
+
+/m6/getDetalleNetworkLocation:
+  displayName: getDetalleNetworkLocation
+  description: |
+    Este endpoint devuelve el detalle de una locacion de red.
+  get:
+    description: GET - Detalle de una locacion de red
+    queryParameters:
+      arg_code:
+        type: string
+        required: false
+        default: "null"
+    responses:
+      200:
+        body:
+          application/json:
+            type: getDetalleNetworkLocationResponse
+            example: !include responses/m6/getDetalleNetworkLocationResponse.json
+
+/m6/getInventarioEquipo:
+  displayName: getInventarioEquipo
+  description: |
+    Este endpoint devuelve informacion del inventario del equipo disponible.
+  get:
+    description: GET - Devuelve informacion del inventario del equipo disponible
+    queryParameters:
+      equipment_id:
+        type: string
+        required: false
+        default: "null"
+    responses:
+      200:
+        body:
+          application/json:
+            type: getInventarioEquipoResponse
+            example: !include responses/m6/getInventarioEquipoResponse.json
+
+            
+
+/m6/getNIRV2:
+  displayName: GetNIRV2
+  description: |
+    Este endpoint devuelve los NIRs.
+  get:
+    description: GET - getNIRV2
+    responses:
+      200:
+        body:
+          application/json:
+            type: getNIRV2Response
+            example: !include examples/getNIRV2Response.json
+
+/m6/getSerie:
+  displayName: GetSerie
+  description: |
+    Este endpoint devuelve los detalles de la serie basados en el nirID.
+  get:
+    description: GET - getSerie
+    queryParameters:
+      nirID:
+        type: integer
+        required: true
+        example: 775
+    responses:
+      200:
+        body:
+          application/json:
+            type: getSerieResponse
+            example: !include examples/getSerieResponse.json
+
+/m6/getTelephoneNumberV2:
+  displayName: GetTelephoneNumberV2
+  description: |
+    Este endpoint devuelve los números de teléfono basados en nirID y serieID.
+  get:
+    description: GET - getTelephoneNumberV2
+    queryParameters:
+      nirID:
+        type: integer
+        required: true
+        example: 222
+      serieID:
+        type: integer
+        required: true
+        example: 379
+    responses:
+      200:
+        body:
+          application/json:
+            type: getTelephoneNumberV2Response
+            example: !include examples/getTelephoneNumberV2Response.json
+/m6/getNIR:
+  displayName: GetNIR
+  description: |
+    Este endpoint devuelve información de NIR basada en aslID.
+  get:
+    description: GET - getNIR
+    queryParameters:
+      aslID:
+        type: integer
+        required: true
+        example: 1500
+    headers:
+      Authorization:
+        description: |
+          Encabezado de autorización utilizando WS-Security UsernameToken.
+          Reemplace "xxxxxx" con sus credenciales reales.
+        type: string
+        required: true
+    responses:
+      200:
+        body:
+          application/xml:
+            type: getNIRResponse
+            example: !include examples/getNIRResponse.json
+
+/m6/getSerieV2:
+  displayName: GetSerieV2
+  description: |
+    Este endpoint devuelve los detalles de la serie V2 basados en el nirID.
+  get:
+    description: GET - getSerieV2
+    queryParameters:
+      nirID:
+        type: integer
+        required: true
+        example: 222
+    headers:
+      Authorization:
+        description: |
+          Encabezado de autorización utilizando WS-Security UsernameToken.
+          Reemplace "xxxxxx" con sus credenciales reales.
+        type: string
+        required: true
+    responses:
+      200:
+        body:
+          application/xml:
+            type: getSerieV2Response
+            example: !include examples/getSerieV2Response.json
+
+/m6/getTelephoneNumber800:
+  displayName: GetTelephoneNumber800
+  description: |
+    Este endpoint devuelve los detalles del número de teléfono 800.
+  get:
+    description: GET - getTelephoneNumber800
+    queryParameters:
+      nir800:
+        type: integer
+        required: true
+        example: 800
+      serie800:
+        type: integer
+        required: true
+        example: 001
+      checkOutIndicator:
+        type: boolean
+        required: false
+        example: false
+    headers:
+      Authorization:
+        description: |
+          Encabezado de autorización utilizando WS-Security UsernameToken.
+          Reemplace "xxxxxx" con sus credenciales reales.
+        type: string
+        required: true
+    responses:
+      200:
+        body:
+          application/xml:
+            type: getTelephoneNumber800Response
+            example: !include examples/getTelephoneNumber800Response.json
+
+/m6/notificacionToSF:
+  displayName: NotificacionToSF
+  description: |
+    Este endpoint envía una notificación a Salesforce.
+  get:
+    description: GET - notificacionToSF
+    queryParameters:
+      indicador:
+        type: integer
+        required: true
+        example: 1
+    headers:
+      Authorization:
+        description: |
+          Encabezado de autorización utilizando WS-Security UsernameToken.
+          Reemplace "occ_app_int" tanto en Username como en Password con sus credenciales reales.
+        type: string
+        required: true
+    responses:
+      200:
+        body:
+          application/xml:
+            type: notificacionToSFResponse
+            example: !include examples/notificacionToSFResponse.json
+
+/m6/updateReservation:
+  displayName: UpdateReservation
+  description: |
+    Este endpoint actualiza una reserva.
+  post:
+    description: POST - updateReservation
+    body:
+      application/xml:
+        example: |
+          <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:src="http://src.oracle.com/">
+             <soapenv:Header>
+                <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+                   <wsse:UsernameToken wsu:Id="UsernameToken-37" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+                      <wsse:Username>occ_app_int</wsse:Username>
+                      <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">occ_app_int</wsse:Password>
+                   </wsse:UsernameToken>
+                </wsse:Security>
+             </soapenv:Header>
+             <soapenv:Body>
+                <src:updateReservationRequest>
+                   <!--Optional:-->
+                   <updateReservationRequestType>
+                      <action>UPDATE</action>
+                      <reservationId>2040</reservationId>
+                      <expirydate>2024-06-29</expirydate>
+                   </updateReservationRequestType>
+                </src:updateReservationRequest>
+             </soapenv:Body>
+          </soapenv:Envelope>
+    responses:
+      200:
+        body:
+          application/xml:
+            type: updateReservationResponse
+            example: !include examples/updateReservationResponse.json
+
+/m6/deleteReservation:
+  displayName: DeleteReservation
+  description: |
+    Este endpoint elimina una reserva.
+  delete:
+    description: DELETE - deleteReservation
+    body:
+      application/xml:
+        example: |
+          <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:src="http://src.oracle.com/">
+             <soapenv:Header>
+                <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+                   <wsse:UsernameToken wsu:Id="UsernameToken-37" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+                      <wsse:Username>occ_app_int</wsse:Username>
+                      <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">occ_app_int</wsse:Password>
+                   </wsse:UsernameToken>
+                </wsse:Security>
+             </soapenv:Header>
+             <soapenv:Body>
+                <src:updateReservationRequest>
+                   <!--Optional:-->
+                   <updateReservationRequestType>
+                      <action>DELETE</action>
+                      <reservationId>1161</reservationId>
+                      <expirydate/>
+                   </updateReservationRequestType>
+                </src:updateReservationRequest>
+             </soapenv:Body>
+          </soapenv:Envelope>
+    responses:
+      200:
+        body:
+          application/xml:
+            type: updateReservationResponse
+            example: !include examples/deleteReservationResponse.json
+
+/m6/reserveTn:
+  displayName: Reserve TN
+  post:
+    description: Endpoint para reservar números telefónicos.
+    body:
+      application/xml:
+        type: reserveTnResponse
+    responses:
+      200:
+        body:
+          application/xml:
+            type: reserveTnResponse
+            example: !include examples/reserveTnResponse.json            
